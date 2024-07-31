@@ -10,66 +10,25 @@
  */
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        String num1 = getNumber(l1);
-        String num2 = getNumber(l2);
+        ListNode node1 = l1;
+        ListNode node2 = l2;
+        ListNode result = new ListNode();
+        ListNode head = result;
 
-        int arrLen = Math.max(num1.length(), num2.length()) ;
-        int[] result = new int[arrLen + 1];
+        int carry = 0;
 
-        int[] first = toIntArray(num1, result.length);
-        int[] second = toIntArray(num2, result.length);
+        while(node1 != null || node2 != null || carry == 1)  {
+            int sum = carry + (node1 == null? 0 : node1.val) + (node2 == null ? 0 : node2.val);
 
-        ListNode node = new ListNode();
-        ListNode head = node;
+            carry = sum / 10;
+            result.next = new ListNode();
+            result = result.next;
+            result.val = sum % 10;
 
-
-         for (int i = 0; i < arrLen; i++) {
-            int sum = result[i] + first[i] + second[i];
-            result[i] = sum % 10;
-            result[i+1] = sum / 10;
-            node.val = result[i];
-            
-            if (i == arrLen - 1) {
-                if (sum < 10) {
-                node.next = null;
-
-                } else {
-                    node.next = new ListNode();
-                    node.next.val = sum / 10;
-                }
-                break;
-            }
-            node.next = new ListNode();
-            node = node.next;
+            node1 = node1 != null ? node1.next : node1;
+            node2 = node2 != null ? node2.next : node2;
         }
 
-
-        return head;
-    }
-
-    public int[] toIntArray(String number, int arraySize) {
-        int[] arr = new int[arraySize];
-
-        for (int i = 0, idx = 0; i < number.length() && idx < arraySize; i++, idx++) {
-            char c = number.charAt(i);
-            if (idx < number.length()) {
-                arr[idx] = c - '0';
-            } else {
-                arr[idx] = 0;
-            }
-        }
-        return arr;
-    }
-
-    public String getNumber(ListNode node) {
-        StringBuilder sb = new StringBuilder();
-
-        ListNode current = node;
-        while (current != null) {
-            sb.append(current.val);
-            current = current.next;
-        }
-
-        return sb.toString();
+        return head.next;
     }
 }
