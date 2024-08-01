@@ -30,4 +30,12 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0062-unique-paths](https://github.com/sunheeroom/algorithm/tree/master/0062-unique-paths) |
+## Array
+|  |
+| ------- |
+| [0027-remove-element](https://github.com/sunheeroom/algorithm/tree/master/0027-remove-element) |
+## Two Pointers
+|  |
+| ------- |
+| [0027-remove-element](https://github.com/sunheeroom/algorithm/tree/master/0027-remove-element) |
 <!---LeetCode Topics End-->
