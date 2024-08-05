@@ -34,12 +34,14 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Array
 |  |
 | ------- |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/sunheeroom/algorithm/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0027-remove-element](https://github.com/sunheeroom/algorithm/tree/master/0027-remove-element) |
 | [0169-majority-element](https://github.com/sunheeroom/algorithm/tree/master/0169-majority-element) |
 | [0189-rotate-array](https://github.com/sunheeroom/algorithm/tree/master/0189-rotate-array) |
 ## Two Pointers
 |  |
 | ------- |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/sunheeroom/algorithm/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0027-remove-element](https://github.com/sunheeroom/algorithm/tree/master/0027-remove-element) |
 | [0189-rotate-array](https://github.com/sunheeroom/algorithm/tree/master/0189-rotate-array) |
 ## Hash Table
